@@ -9,9 +9,9 @@ export default function List() {
   );
 
   const removeTodoAction = (e, id) => {
-    e.stopPropagation()
-    dispatch(removeTodo({ id }))
-  }
+    e.stopPropagation();
+    dispatch(removeTodo({ id }));
+  };
   const completeTodoAction = (payload) => {
     dispatch(completeTodo(payload));
   };
@@ -36,7 +36,7 @@ export default function List() {
           </div>
           <span
             className="remove-btn"
-            onClick={e => removeTodoAction(e, todo.id)}
+            onClick={(e) => removeTodoAction(e, todo.id)}
           >
             &#x2715;
           </span>
